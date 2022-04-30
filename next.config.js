@@ -1,6 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+module.exports = {
+    images: {
+        domains: ['ar-auto-repair-services.local']
+    }
 }
-
-module.exports = nextConfig
