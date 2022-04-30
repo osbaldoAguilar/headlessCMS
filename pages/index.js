@@ -1,24 +1,25 @@
 import Link from "next/link";
-
-export default function Home({posts}) {
-  console.log(posts);
-  function removeTags(post) {
-    console.log(post);
-  }
+import PageLayout from '../components/PageLayout'
+export default function Home({data}) {
+  console.log(data);
+  const {content} = data.nodeByUri
+  console.log('content: ', content);
   return (
-    <div>
+    <PageLayout>
+      
       <h1>Posts</h1>
-      {posts.nodes.map(post => {
+      <article dangerouslySetInnerHTML={{__html: content}}></article>
+      {/* {posts.nodes.map(post => {
         return( 
-          <div key={post.slug}>
+          <PageLayout key={post.slug}>
             <li>
               <Link href={`posts/${post.slug}`}>{post.title}</Link>
             </li>
-          </div>
+          </PageLayout>
         )
-      })}
+      })} */}
 
-    </div>
+    </PageLayout>
   )
 }
 
@@ -28,25 +29,48 @@ export async function getStaticProps() {
     headers: { 'Content-Type': 'application/json'},
     body: JSON.stringify({
       query:`
-        query HomePageQuery {
-          posts {
-            nodes {
-              content
+        query HomePage {
+          nodeByUri(uri: "/") {
+            __typename
+            ... on ContentType {
               id
-              slug
+              name
+            }
+            ... on Page {
+              id
               title
+              content
+              slug
             }
           }
         }
       `
     })
   })
-
+  
   const json = await res.json()
-
+  
   return {
     props: {
-      posts: json.data.posts
+      data: json.data
     }
   }
 }
+// query HomePageQuery {
+//   posts {
+//     nodes {
+//       content
+//       id
+//       slug
+//       title
+//     }
+//   },
+//   pages {
+//     nodes {
+//       content
+//       id
+//       slug
+//       title
+//     }
+//   }
+// }
