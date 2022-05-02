@@ -7,7 +7,7 @@ export default function Home({data}) {
   return (
     <PageLayout>
       
-      <h1 className="text-3xl font-bold underline">Posts</h1>
+      <h1>Posts</h1>
       <article dangerouslySetInnerHTML={{__html: content}}></article>
       {/* {posts.nodes.map(post => {
         return( 
@@ -30,7 +30,7 @@ export async function getStaticProps() {
     body: JSON.stringify({
       query:`
         query HomePage {
-          nodeByUri(uri: "/") {
+          nodeByUri(uri: "/services") {
             __typename
             ... on ContentType {
               id

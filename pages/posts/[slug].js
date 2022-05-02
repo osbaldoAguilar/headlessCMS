@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default function Post ( data ) {
-    console.log({data});
+    // console.log({data});
     const post = data.post
     return (
         <div>

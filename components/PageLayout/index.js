@@ -1,9 +1,13 @@
+import Navbar from "../Nav"
 import TitleComp from "./Title"
 
 function index({children}) {
   return (
       <div>
-        <TitleComp/>
+        <TitleComp>
+          <p>Hi</p>
+        </TitleComp>
+        <Navbar/>
         {children}
       </div>
   )

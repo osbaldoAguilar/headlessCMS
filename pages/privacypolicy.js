@@ -1,13 +1,13 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
-export default function Home({data}) {
+export default function PrivacyPolicy({data}) {
   // console.log(data);
   const {content} = data.nodeByUri
   // console.log('content: ', content);
   return (
     <PageLayout>
       
-      <h1 className="text-3xl font-bold underline">Posts</h1>
+      <h1>Posts</h1>
       <article dangerouslySetInnerHTML={{__html: content}}></article>
       {/* {posts.nodes.map(post => {
         return( 
@@ -30,7 +30,7 @@ export async function getStaticProps() {
     body: JSON.stringify({
       query:`
         query HomePage {
-          nodeByUri(uri: "/") {
+          nodeByUri(uri: "/privacypolicy") {
             __typename
             ... on ContentType {
               id
