@@ -1,16 +1,21 @@
 import Image from "next/image";
+import { BlockCentered, RoundedCard } from "../../components/StyledComponents/WrappingComponents";
 
 export default function Post ( data ) {
     // console.log({data});
     const post = data.post
     return (
-        <div>
-            <h1>{post.title}</h1>
-            { post.featuredImage?.node.sourceUrl && 
-                <Image width="640" height="426" src={post.featuredImage.node.sourceUrl} alt={`${post.title}`}/>
-            }
-            <article dangerouslySetInnerHTML={{__html: post.content}}></article>
-        </div>
+        <BlockCentered>
+            <RoundedCard>
+              <h1>{post.title}</h1>
+
+              { post.featuredImage?.node.sourceUrl && 
+                  <Image width="640" height="426" src={post.featuredImage.node.sourceUrl} alt={`${post.title}`}/>
+              }
+              <article dangerouslySetInnerHTML={{__html: post.content}}></article>
+
+            </RoundedCard>
+        </BlockCentered>
     )
 }
 

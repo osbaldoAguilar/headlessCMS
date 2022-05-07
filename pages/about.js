@@ -1,14 +1,22 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
+import { Block, BlockCentered, RoundedCard } from "../components/StyledComponents/WrappingComponents";
 export default function Home({data}) {
   // console.log(data);
   const {content} = data.nodeByUri
   // console.log('content: ', content);
   return (
     <PageLayout>
-      
-      <h1>Posts</h1>
-      <article dangerouslySetInnerHTML={{__html: content}}></article>
+      <Block>
+        <BlockCentered>
+          <RoundedCard>
+            <article dangerouslySetInnerHTML={{__html: content}}></article>
+
+          </RoundedCard>
+
+        </BlockCentered>
+
+      </Block>
       {/* {posts.nodes.map(post => {
         return( 
           <PageLayout key={post.slug}>

@@ -1,14 +1,16 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
+import { Block } from "../components/StyledComponents/WrappingComponents";
 export default function Home({data}) {
   // console.log(data);
   const {content} = data.nodeByUri
   // console.log('content: ', content);
   return (
     <PageLayout>
-      
-      <h1 className="text-3xl font-bold underline">Posts</h1>
-      <article dangerouslySetInnerHTML={{__html: content}}></article>
+      <Block>
+        <article dangerouslySetInnerHTML={{__html: content}}></article>
+
+      </Block>
       {/* {posts.nodes.map(post => {
         return( 
           <PageLayout key={post.slug}>
@@ -18,7 +20,7 @@ export default function Home({data}) {
           </PageLayout>
         )
       })} */}
-
+    
     </PageLayout>
   )
 }
