@@ -14,6 +14,7 @@ function index() {
                   </NavLink>
                 <NavLink href='/about'>About</NavLink>
                 <NavLink href='/services'>Services</NavLink>
+                <NavLink href='/contact'>Contact</NavLink>
                 <NavLink href='/privacypolicy'>Privacy Policy</NavLink>
             </div>
           </header>

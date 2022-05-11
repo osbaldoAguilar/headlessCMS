@@ -19,7 +19,7 @@ export default function Gform ( data ) {
     )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
     const res = await fetch('http://ar-auto-repair-services.local/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
@@ -57,7 +57,7 @@ export async function getStaticProps(context) {
     
     return {
       props: {
-        gFrom: json.data
+        gForm: json.data
       }
     }
   }
