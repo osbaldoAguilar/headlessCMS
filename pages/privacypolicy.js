@@ -1,24 +1,22 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
+import { Block, BlockCentered, ExtendedCard } from "../components/StyledComponents/WrappingComponents";
 export default function PrivacyPolicy({data}) {
   // console.log(data);
   const {content} = data.nodeByUri
   // console.log('content: ', content);
   return (
     <PageLayout>
-      
-      <h1>Posts</h1>
-      <article dangerouslySetInnerHTML={{__html: content}}></article>
-      {/* {posts.nodes.map(post => {
-        return( 
-          <PageLayout key={post.slug}>
-            <li>
-              <Link href={`posts/${post.slug}`}>{post.title}</Link>
-            </li>
-          </PageLayout>
-        )
-      })} */}
+    <div className="">
+    <BlockCentered>
+      <ExtendedCard >
+    
+        <article dangerouslySetInnerHTML={{__html: content}}></article>
+      </ExtendedCard>
 
+    </BlockCentered>
+
+    </div>
     </PageLayout>
   )
 }

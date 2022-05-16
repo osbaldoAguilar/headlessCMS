@@ -62,6 +62,16 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+hr {
+  display: none;
+  visibility: hidden;
+}
+
+p, label, input, button {
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
 strong {
   /* Our obscure magic trick: */
   -webkit-box-decoration-break: clone;
@@ -75,6 +85,105 @@ strong {
 article h2 {
   display: none;
 }
+
+.heading {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+  color: whitesmoke;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  overflow-wrap: break-word;
+  padding: 0 20px;
+  border-top: 2px solid whitesmoke;
+}
+
+table {
+  /* border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd; */
+  display: flex;
+  justify-content: center;
+  border-collapse: collapse;
+  border: blue;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: whitesmoke;
+  text-transform: capitalize;
+  max-width: 900px;
+  /* font-family: sans-serif; */
+
+}
+
+table h2 {
+  font-family: inherit;
+  color: black;
+}
+
+table thead tr {
+  background-color: royalblue;
+  color: #ffffff;
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+}
+
+table tbody tr {
+  border-bottom: 5px solid #dddddd;
+}
+
+/* table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+} */
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid royalblue;
+}
+
+/* table tbody tr.active-row {
+  font-weight: bold;
+  color: royalblue;
+} */
+
+.paragrapht {
+  color: black;
+}
+
+.inputField {
+  background: transparent;
+  border-bottom: 5px solid whitesmoke;
+}
+
+.form-input-hint {
+  display: none;
+}
+
+#submit {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+h3 {
+  color: whitesmoke;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 2rem;
+  padding: 20px 0;
+  text-align: center;
+  /* text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5); */
+}
+
+
 
 /* 
 h2 {

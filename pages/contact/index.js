@@ -2,7 +2,7 @@ import Router from "next/router";
 import { useRef, useEffect } from "react";
 import PageLayout from '../../components/PageLayout'
 import styles from '../../styles/Form.module.css'
-import { Block, BlockCentered, ButtonWrapper, RoundedCard } from "../../components/StyledComponents/WrappingComponents";
+import { Block, BlockCentered, ButtonWrapper, ExtendedCard } from "../../components/StyledComponents/WrappingComponents";
 // const stripHtml = (string) => string.replace(/(<([^>]+)>)/gi, "");
 
 const initialState = {
@@ -170,43 +170,44 @@ function contact() {
       <input id="your-email" type="text" name="somebodys-email"></input> */}
   return (
       <PageLayout>
+        <div className="h-screen flex flex-col">
         <BlockCentered>
-
-        <RoundedCard>
-
-        <div className={styles.form} x-data="wpForm()">
+            
+            <div className={styles.form} x-data="wpForm()">
         <form action="http://ar-auto-repair-services.local/wp-json/contact-form-7/v1/contact-forms/208/feedback" method="post" autoComplete="off" x-ref="form" submit="submit">
-        <BlockCentered>
-            <label htmlFor='your-name'>{`Somebody's name`}</label>
-            <input id="your-name" type="text" name="somebodys-name"></input> 
-        </BlockCentered>
-        <BlockCentered>
-            <label className="form-label" htmlFor="your-subject">What is the subject for contact us</label>
-            <input className="form-input" id="your-subject" type="text" name="your-subject"/>
-            <div className="form-input-hint" x-show="validationError['your-subject']" x-text="validationError['your-subject']"></div>
-        </BlockCentered>
-        {/* <BlockCentered> */}
+        <p className="flex justify-center">
+                Have a Question, need a answer... Fill out the form below
+            </p>
+            <div className="grid grid-cols-2 p-10">
+
+            <label htmlFor='your-name'>Please enter your name</label>
+            <input className='inputField' id="your-name" type="text" name="somebodys-name"></input> 
+    
+            <label className={`form-label`} htmlFor="your-subject">What is the subject for contact us</label>
+            {/* <div> */}
+                <input className="inputField form-input" id="your-subject" type="text" name="your-subject"/>
+                {/* <div className="form-input-hint" x-show="validationError['your-subject']" x-text="validationError['your-subject']"></div> */}
+            {/* </div> */}
             <label className="form-label" htmlFor="your-email">Any valid email address</label>
-            <input className="form-input" id="your-email" type="email" name="your-email"/>
-            <div className="form-input-hint" x-show="validationError['your-email']" x-text="validationError['your-email']"></div>
-        {/* </BlockCentered> */}
-
-        {/* <BlockCentered> */}
+            {/* <div> */}
+                <input className="inputField form-input" id="your-email" type="email" name="your-email"/>
+                {/* <div className="form-input-hint" x-show="validationError['your-email']" x-text="validationError['your-email']"></div> */}
+            {/* </div> */}
             <label className="form-label" htmlFor="your-message">Any Other Information you want to share with us?</label>
-            <input className="form-input" id="your-message" type="text" name="your-message"/>
+            <input className="inputField form-input" id="your-message" type="text" name="your-message"/>
             <div className="form-input-hint" x-show="validationError['your-message']" x-text="validationError['your-message']"></div>
-        {/* </BlockCentered> */}
+    
 
-            {/* <label htmlFor='your-subject'>{`Somebody's Subject`}</label>
-            <input id="your-subject" type="text" name="somebodys-subject"></input> */}
-            {/* <!-- Other input elements --> */}
-
-            <button type="submit">Submit</button>
+            <button id="submit" type="submit">Submit</button>
         
+            </div>
         </form>
         </div>
-        </RoundedCard>
         </BlockCentered>
+        
+        {/* </ExtendedCard> */}
+        {/* </BlockCentered> */}
+        </div>
       </PageLayout>
   )
 }

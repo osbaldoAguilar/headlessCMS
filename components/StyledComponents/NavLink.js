@@ -1,25 +1,31 @@
 import styled from "styled-components";
 
 export default function NavLink({ href, children }) {
-    return (
-      <NavLinkAnchor href={href}>
+  return (
+    <NavLinkAnchor href={href}>
+      {children}
+      <Revealed aria-hidden={true}>
         {children}
-        <Revealed aria-hidden={true}>
-          {children}
-        </Revealed>
-      </NavLinkAnchor>
-    );
-  }
-  const NavLinkAnchor = styled.a`
+      </Revealed>
+    </NavLinkAnchor>
+  );
+}
+const NavLinkAnchor = styled.a`
     display: block;
     position: relative;
     text-decoration: none;
     color: inherit;
     font-weight: 700;
     font-size: 1.25rem;
+    color: transparent;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
   `;
-  const Revealed = styled.span`
-    color: red;
+const Revealed = styled.span`
+    color: #79a6ff;
     position: absolute;
     top: 0;
     left: 0;

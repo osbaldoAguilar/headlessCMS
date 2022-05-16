@@ -1,21 +1,20 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
+import { BlockCentered, ServicesCard } from "../components/StyledComponents/WrappingComponents";
 export default function Home({data}) {
   // console.log(data);
   const {content} = data.nodeByUri
   // console.log('content: ', content);
   return (
     <PageLayout>
+    <BlockCentered>
+    
+    <ServicesCard>
       <article dangerouslySetInnerHTML={{__html: content}}></article>
-      {/* {posts.nodes.map(post => {
-        return( 
-          <PageLayout key={post.slug}>
-            <li>
-              <Link href={`posts/${post.slug}`}>{post.title}</Link>
-            </li>
-          </PageLayout>
-        )
-      })} */}
+
+    </ServicesCard>
+
+    </BlockCentered>
 
     </PageLayout>
   )

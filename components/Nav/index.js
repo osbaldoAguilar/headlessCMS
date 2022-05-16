@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Logo from "../StyledComponents/Logo"
 import NavLink from "../StyledComponents/NavLink"
 import LinkStyle from "./Link"
@@ -6,12 +7,13 @@ function index() {
         <LinkStyle>
           <header>
             <div className='flex flex-row justify-around items-center'>
-                <NavLink href='/'>
+                <Link href='/' passHref><Logo/></Link>  
+                  
+                {/* <NavLink href='/'>
                   <div className="flex flex-row justify-around items-center">
-                  <Logo/>
                   {/* <p>Repair</p> */}
-                  </div>
-                  </NavLink>
+                  {/* </div>
+                  </NavLink> */} 
                 <NavLink href='/about'>About</NavLink>
                 <NavLink href='/services'>Services</NavLink>
                 <NavLink href='/contact'>Contact</NavLink>

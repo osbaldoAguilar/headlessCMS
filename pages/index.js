@@ -1,26 +1,33 @@
-import Link from "next/link";
+import Router from 'next/router';
 import PageLayout from '../components/PageLayout'
-import { Block } from "../components/StyledComponents/WrappingComponents";
+import { Block, BlockCentered } from "../components/StyledComponents/WrappingComponents";
+import styles from '../styles/Home.module.css'
 export default function Home({data}) {
-  // console.log(data);
+  console.log(data);
   const {content} = data.nodeByUri
-  // console.log('content: ', content);
+  const {posts} = data
+  console.log('post: ', posts.edges);
   return (
     <PageLayout>
       <Block>
         <article dangerouslySetInnerHTML={{__html: content}}></article>
-
+        <BlockCentered>
+        <h4 className='flex items-center text-white text-2xl '>What people are saying about us</h4>
+        <div className='grid grid-cols-2 text-white p-10 gap-2'>
+          { posts.edges.map( post => {
+            console.log(post)
+            return <div onClick={() => {
+              Router.push({
+                pathname:`/posts/${post.node.slug}`
+              })
+            }} key={post.node.id}>
+              <h4>{post.node.title}</h4>
+              {/* <article dangerouslySetInnerHTML={{__html: post.node.content}}></article>*/}
+            </div> 
+          })}
+        </div>
+        </BlockCentered>
       </Block>
-      {/* {posts.nodes.map(post => {
-        return( 
-          <PageLayout key={post.slug}>
-            <li>
-              <Link href={`posts/${post.slug}`}>{post.title}</Link>
-            </li>
-          </PageLayout>
-        )
-      })} */}
-    
     </PageLayout>
   )
 }
@@ -43,6 +50,17 @@ export async function getStaticProps() {
               title
               content
               slug
+            }
+          },
+          posts {
+            edges {
+              node {
+                id
+                title
+                date
+                content
+                slug
+              }
             }
           }
         }
