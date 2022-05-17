@@ -1,22 +1,24 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+download =>
+<img width="630" alt="Screen Shot 2022-05-17 at 10 14 35 AM" src="https://user-images.githubusercontent.com/50221347/168832301-45947e59-65fe-4e13-bb2d-4360de0be8f6.png">
 
 First, run the development server:
+open terminal check node version 
+node -v  "16 > higher"
+#Missing Node right-click => https://nodejs.org/en/download/ 
+start front end 
+npm install || yarn 
 
-```bash
-npm run dev
-# or
-yarn dev
+npm run dev || yarn dev
 ```
+then download zipped local site from drive 
+dont not export --- on your local environment 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+create a new site with blue print --- Drag zipped site into local and it should accept it as a blueprint
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+enter username and password and click on wp dashboard to see the next front end 
 
 ## Learn More
 
