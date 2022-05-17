@@ -9,20 +9,10 @@ open terminal check node version
 node -v  "16 > higher"
 #Missing Node right-click => https://nodejs.org/en/download/ 
 start front end 
-
-
-
 npm install || yarn 
-
+then
 npm run dev || yarn dev
-
-
-
-
 ```
-
-
-
 then download zipped local site from drive 
 dont not export --- on your local environment 
 <img width="996" alt="Screen Shot 2022-05-17 at 10 18 09 AM" src="https://user-images.githubusercontent.com/50221347/168833109-3b5559bf-4b91-47ca-badc-3d707ec5b20c.png">
