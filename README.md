@@ -15,10 +15,13 @@ npm run dev || yarn dev
 ```
 then download zipped local site from drive 
 dont not export --- on your local environment 
-
+<img width="996" alt="Screen Shot 2022-05-17 at 10 18 09 AM" src="https://user-images.githubusercontent.com/50221347/168833109-3b5559bf-4b91-47ca-badc-3d707ec5b20c.png">
 create a new site with blue print --- Drag zipped site into local and it should accept it as a blueprint
+<img width="1000" alt="Screen Shot 2022-05-17 at 10 19 21 AM" src="https://user-images.githubusercontent.com/50221347/168833436-ca942e48-15d3-4d34-a929-89c4bb490c34.png">
 
 enter username and password and click on wp dashboard to see the next front end 
+<img width="442" alt="Screen Shot 2022-05-17 at 10 21 51 AM" src="https://user-images.githubusercontent.com/50221347/168834030-d15315a5-1bf5-421d-bdf8-f726b8eca0e6.png">
+<img width="1282" alt="Screen Shot 2022-05-17 at 10 25 58 AM" src="https://user-images.githubusercontent.com/50221347/168835068-1466277d-02fd-45d7-94a0-da803065d00c.png">
 
 ## Learn More
 
