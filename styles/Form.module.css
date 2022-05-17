@@ -1,0 +1,26 @@
+.form {
+    display: block;
+    margin: 0 auto;
+
+    /* line-height: 65px; */
+}
+
+.form p {
+    padding: none;
+    background: royalblue;
+    border: 4px solid royalblue;
+    border-radius: 5px;
+
+}
+
+.form div label {
+    padding: 0 0 40px 0
+}
+
+.form div input {
+    all: initial;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: whitesmoke;
+    border-bottom: 3px solid whitesmoke;
+}

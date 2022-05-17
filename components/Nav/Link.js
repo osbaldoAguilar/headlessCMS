@@ -1,8 +1,10 @@
-
+import styles from '../../styles/Home.module.css'
 function LinkStyle({children}) {
   return (
-    <div className='text-red-700'>
+    <div className=''>
+      <div className={styles.ridgeB}>
         {children}
+      </div>
     </div>
   )
 }

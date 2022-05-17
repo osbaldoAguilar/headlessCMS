@@ -1,14 +1,45 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
+import { Block, BlockCentered, AboutCard } from "../components/StyledComponents/WrappingComponents";
+import styles from '../styles/About.module.css'
 export default function Home({data}) {
   // console.log(data);
   const {content} = data.nodeByUri
   // console.log('content: ', content);
   return (
     <PageLayout>
-      
-      <h1>Posts</h1>
-      <article dangerouslySetInnerHTML={{__html: content}}></article>
+    <div className={styles.aboutContainer}>
+      <AboutCard>
+            <div className="flex justify-center h-screen">
+              <article dangerouslySetInnerHTML={{__html: content}}></article>
+
+            </div>
+
+          </AboutCard>
+    </div>
+      {/* <Block> */}
+        {/* <BlockCentered> */}
+        {/* <div class="container">
+<h4>Business Hours
+</h4>
+<table>
+<tbody><tr class="active-row"><th>Week Day</th><td>Hours</td></tr>
+<tr><th>Sunday</th><td>Closed</td></tr>
+<tr><th>Monday</th><td>8:00am - 6:30pm</td></tr>
+<tr><th>Tuesday</th><td>8:00am - 6:30pm</td></tr>
+<tr><th>Wednesday</th><td>8:00am - 6:30pm</td></tr>
+<tr><th>Thursday</th><td>8:00am - 6:30pm</td></tr>
+<tr><th>Friday</th><td>8:00am - 6:30pm</td></tr>
+<tr><th>Saturday</th><td>8:00am - 6:30pm</td></tr>
+</tbody></table>
+<div class="grid grid-cols-2">
+<div>
+<h4 class="heading">Contact</h4> */}
+          
+
+        {/* </BlockCentered> */}
+
+      {/* </Block> */}
       {/* {posts.nodes.map(post => {
         return( 
           <PageLayout key={post.slug}>

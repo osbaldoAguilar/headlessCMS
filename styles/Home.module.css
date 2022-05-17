@@ -108,6 +108,30 @@
   margin-left: 0.5rem;
 }
 
+.divider {
+  border-right: 10px solid linear-gradient(to bottom left, #ff0000, #d05600, #a86b03, #887334, #74735a);
+  transform: skew(146deg, 357deg);
+  /* height: 40px; */
+  /* background-image: ; */
+}
+
+.ridgeB {
+  display: block;
+  padding: 20px 0;
+  /* background: linear-gradient(to bottom, #2b2932, #3d3746, #51445a, #67526d, #7f6080, #926188, #a7618d, hsl(329, 41%, 56%), hsl(337, 57%, 56%), hsl(344, 71%, 55%), hsl(210, 84%, 28%), hsl(218, 88%, 26%)); */
+  /* background: linear-gradient(to bottom, hsl(253, 10%, 18%), hsl(264, 12%, 25%), hsl(275, 14%, 27%), hsl(287, 14%, 27%), hsl(298, 14%, 27%), hsl(312, 20%, 27%), hsl(322, 28%, 27%), hsl(329, 41%, 27%), hsl(337, 57%, 17%), hsl(344, 71%, 27%), hsl(349, 81%, 27%), hsl(356, 81%, 27%)) */
+  /* border: 5px ridge rgb(238, 174, 202); */
+}
+
+.wpChildren {
+  /* background: linear-gradient(to top, hsl(253, 10%, 18%), hsl(264, 12%, 25%), hsl(275, 14%, 27%), hsl(287, 14%, 27%), hsl(298, 14%, 27%), hsl(312, 20%, 27%), hsl(322, 28%, 27%), hsl(329, 41%, 27%), hsl(337, 57%, 17%), hsl(344, 71%, 27%), hsl(349, 81%, 27%), hsl(356, 81%, 27%)); */
+  background: linear-gradient(to top, #000b18, #00172d, #00264d, #02386e, #00498d, #0052a2);
+  /* background:red; */
+
+}
+
+
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

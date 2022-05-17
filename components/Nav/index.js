@@ -1,21 +1,50 @@
-import Link from "next/link";
-import LinkStyle from "./Link";
-
-function Navbar() {
+import Link from "next/link"
+import Logo from "../StyledComponents/Logo"
+import NavLink from "../StyledComponents/NavLink"
+import LinkStyle from "./Link"
+function index() {
   return (
-      <LinkStyle>
-    <div className="flex flex-row justify-between">
-        <Link href='/'>home</Link>
-        <Link href='/about'>About</Link>
-        <Link href='/services'>Services</Link>
-        <Link href='/privacypolicy'>Privacy</Link>
-
-    </div>
-    </LinkStyle>
+        <LinkStyle>
+          <header>
+            <div className='flex flex-row justify-around items-center'>
+                <Link href='/' passHref><Logo/></Link>  
+                  
+                {/* <NavLink href='/'>
+                  <div className="flex flex-row justify-around items-center">
+                  {/* <p>Repair</p> */}
+                  {/* </div>
+                  </NavLink> */} 
+                <NavLink href='/about'>About</NavLink>
+                <NavLink href='/services'>Services</NavLink>
+                <NavLink href='/contact'>Contact</NavLink>
+                <NavLink href='/privacypolicy'>Privacy Policy</NavLink>
+            </div>
+          </header>
+        </LinkStyle>
   )
 }
 
-export default Navbar
+export default index
+// import Link from "next/link";
+// import LinkStyle from "./Link";
+// import styles from "../../styles/Home.module.css"
+// function Navbar() {
+//   return (
+//       <LinkStyle>
+//         <div className="flex flex-row justify-around h-10">
+//             <Link href='/'>home</Link>
+//             <div className={styles.divider}/>
+//             <Link href='/about'>About</Link>
+//             <div className={styles.divider}/>
+//             <Link href='/services'>Services</Link>
+//             <div className={styles.divider}/>
+//             <Link href='/privacypolicy'>Privacy</Link>
+//         </div>
+//       </LinkStyle>
+//   )
+// }
+
+// export default Navbar
 
 // import Image from "next/image";
 

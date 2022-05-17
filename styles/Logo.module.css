@@ -1,0 +1,56 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
+.Logo {
+    transition: all .2s ease-in-out;
+}
+
+.Logo:hover {
+    transform: scale(1.1);
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #131212;
+    font-family: inherit;
+    border-radius: 7px;
+    width: 60px;
+    height: 60px;
+    padding: 35px
+}
+
+.innerLogo {
+    justify-content: space-around;
+    padding: 15px
+}
+
+.innerLogo span:nth-child(1) {
+    /* align-items: flex-start !important; */
+    font-size: 35px;
+    padding: 0 5px 10px 0;
+}
+
+.innerLogo span:nth-child(2) {
+    /* line-height: 20px; */
+    position: absolute;
+    top: 8px;
+    font-size: 14px;
+    padding: 12px 12px 0 0;
+    /* border-bottom: 1px solid #121111; */
+}
+
+.innerLogo span:nth-child(3) {
+    position: absolute;
+    top: 22px;
+    font-size: 14px;
+    padding: 12px 12px 0 0;
+}
+
+.innerLogo span:nth-child(4) {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    font-size: 14px;
+    padding: 12px 12px 0 0;
+}
