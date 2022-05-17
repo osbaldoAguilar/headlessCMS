@@ -1,18 +1,17 @@
 import styled from "styled-components";
 const Block = styled.div`
-    p {
-        display: block;
-        margin: 0 auto;
-    }
+  p {
+    display: block;
+    margin: 0 auto;
+  }
 `
 const BlockCentered = styled.div`
-    display: flex;
-    place-content: center
+  display: flex;
+  place-content: center
 `
 const RoundedCard = styled.div`
   display: flex;
   place-items: center;
-  /* justify-content: center */
   width: 480px;
   flex-direction: column;
   text-align: center;
@@ -72,7 +71,6 @@ const RoundedCard = styled.div`
 const ExtendedCard = styled.div`
   display: flex;
   place-items: center;
-  /* justify-content: center */
   width: 480px;
   flex-direction: column;
   text-align: center;
@@ -81,15 +79,6 @@ const ExtendedCard = styled.div`
   color: black;
   padding: 1rem;
   margin: 1rem;
-  /* border-radius: 25px; */
-  /* h3 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 2rem;
-    color: royalblue;
-    text-decoration: none;
-    cursor: pointer;
-  } */
   img {
     max-width: 300px;
   }
@@ -100,11 +89,12 @@ const ExtendedCard = styled.div`
     font-family: monospace;
   }
   p {
-    /* max-width: 1200px; */
+    justify-items: center;
     font-size: 1.15em;
     line-height: 1.58;
     font-weight: 400;
     letter-spacing: -0.003em;
+    width: max-content;
   }
   table {
       display: flex;
@@ -135,6 +125,7 @@ const ExtendedCard = styled.div`
         }
     }
   }
+  
 `;
  
 const AboutCard = styled.div`
@@ -146,8 +137,6 @@ const AboutCard = styled.div`
   background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d);
   color: black;
   padding: 1rem;
-  /* margin: 1rem; */
-  /* border-radius: 25px; */
   div> div, div>div>div {
     border: 5px solid whitesmoke;
   }
@@ -162,7 +151,6 @@ const AboutCard = styled.div`
     font-family: monospace;
   }
   p {
-    /* max-width: 1200px; */
     font-size: 1.15em;
     line-height: 1.58;
     font-weight: 400;
@@ -199,7 +187,7 @@ const AboutCard = styled.div`
   }
 `;
 const ServicesCard = styled.div`
-  background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d,    );
+  background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d);
   .wp-block-cover {
     display: flex;
     flex-direction: row-reverse;
@@ -209,7 +197,6 @@ const ServicesCard = styled.div`
   video {
     all: initial;
     max-height: 500px;
-    /* max-width: 1200px */
   }
   .contactBtn {
     right: 0;
@@ -218,19 +205,17 @@ const ServicesCard = styled.div`
     padding: 5px;
     border: 3px solid royalblue;
     border-radius: 10px;
-
   }
   .wp-block-media-text__media {
-     outline: 15px solid whitesmoke;
-     border-radius: 1px;
-     margin: -25px;
-    }
-    .wp-block-media-text {
-      display: flex;
-      justify-content: space-around;
-      place-items: baseline;
-      /* padding: 10px; */
-      padding: 20px
+    outline: 15px solid whitesmoke;
+    border-radius: 1px;
+    margin: -25px;
+  }
+  .wp-block-media-text {
+    display: flex;
+    justify-content: space-around;
+    place-items: baseline;
+    padding: 20px
   }
   .wp-block-media-text:nth-child(even) {
     flex-direction: row
@@ -249,29 +234,10 @@ const ServicesCard = styled.div`
   h3 {
     margin: 30px
   }
-  /* color: black;
-  padding: 1rem;
-  margin: 1rem; */
-  /* border-radius: 25px; */
-  /* h3 {
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 2rem;
-    color: royalblue;
-    text-decoration: none;
-    cursor: pointer;
-  } */
   img {
     max-width: 300px;
   }
-  /* span {
-    font-weight: 100;
-    color: #606060;
-    margin-top: -1.5rem;
-    font-family: monospace;
-  } */
   p {
-    /* max-width: 1200px; */
     font-size: 1.15em;
     line-height: 1.58;
     font-weight: 400;
