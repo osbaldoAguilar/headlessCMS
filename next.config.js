@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-        domains: ['ar-auto-repair-services.local']
+        domains: ['https://arautorepair1.wpengine.com']
     }
 }

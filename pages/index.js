@@ -3,10 +3,8 @@ import PageLayout from '../components/PageLayout'
 import { Block, BlockCentered } from "../components/StyledComponents/WrappingComponents";
 import styles from '../styles/Home.module.css'
 export default function Home({data}) {
-  console.log(data);
   const {content} = data.nodeByUri
   const {posts} = data
-  console.log('post: ', posts.edges);
   return (
     <PageLayout>
       <Block>
@@ -22,7 +20,6 @@ export default function Home({data}) {
               })
             }} key={post.node.id}>
               <h4>{post.node.title}</h4>
-              {/* <article dangerouslySetInnerHTML={{__html: post.node.content}}></article>*/}
             </div> 
           })}
         </div>
@@ -33,7 +30,7 @@ export default function Home({data}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://ar-auto-repair-services.local/graphql', {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json'},
     body: JSON.stringify({
@@ -76,21 +73,3 @@ export async function getStaticProps() {
     }
   }
 }
-// query HomePageQuery {
-//   posts {
-//     nodes {
-//       content
-//       id
-//       slug
-//       title
-//     }
-//   },
-//   pages {
-//     nodes {
-//       content
-//       id
-//       slug
-//       title
-//     }
-//   }
-// }

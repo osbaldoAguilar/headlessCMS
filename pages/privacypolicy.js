@@ -22,7 +22,7 @@ export default function PrivacyPolicy({data}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://ar-auto-repair-services.local/graphql', {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json'},
     body: JSON.stringify({

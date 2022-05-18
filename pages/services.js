@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
 import { BlockCentered, ServicesCard } from "../components/StyledComponents/WrappingComponents";
-export default function Home({data}) {
+export default function Services({data}) {
   // console.log(data);
   const {content} = data.nodeByUri
   // console.log('content: ', content);
@@ -21,7 +21,7 @@ export default function Home({data}) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://ar-auto-repair-services.local/graphql', {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json'},
     body: JSON.stringify({
@@ -53,21 +53,3 @@ export async function getStaticProps() {
     }
   }
 }
-// query HomePageQuery {
-//   posts {
-//     nodes {
-//       content
-//       id
-//       slug
-//       title
-//     }
-//   },
-//   pages {
-//     nodes {
-//       content
-//       id
-//       slug
-//       title
-//     }
-//   }
-// }
