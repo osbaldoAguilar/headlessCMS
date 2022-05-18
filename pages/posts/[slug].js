@@ -10,12 +10,10 @@ export default function Post(data) {
         <BlockCentered>
           <RoundedCard className='h-100px text-black'>
             <h1>{post.title}</h1>
-
             {post.featuredImage?.node.sourceUrl &&
               <Image width="640" height="426" src={post.featuredImage.node.sourceUrl} alt={`${post.title}`} />
             }
             <article dangerouslySetInnerHTML={{ __html: post.content }}></article>
-
           </RoundedCard>
         </BlockCentered>
       </div>
@@ -26,7 +24,7 @@ export default function Post(data) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch('http://ar-auto-repair-services.local/graphql', {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -61,7 +59,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch('http://ar-auto-repair-services.local/graphql', {
+  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
