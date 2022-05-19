@@ -1,8 +1,19 @@
-import React from 'react'
-
+import PageLayout from '../components/PageLayout'
+import Logo from '../components/StyledComponents/Logo'
 function thanks() {
   return (
-    <div>thanks your email was sucessful</div>
+    <PageLayout>
+      <div className='flex h-screen justify-center flex-col text-center'>
+        <p>       
+        
+         <Logo id="pageLogo"/>
+
+        Thanks your email was sucessful
+        </p>
+        <p>We will contact within 48hrs</p>
+      </div>
+
+    </PageLayout>
   )
 }
 

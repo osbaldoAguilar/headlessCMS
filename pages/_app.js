@@ -100,7 +100,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:title" content="My new title" key="title" />
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
-        <link crossOrigin={value.toString()} href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;700&family=Rubik:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&family=Titillium+Web:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;700&family=Rubik:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&family=Titillium+Web:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></link>
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={theme}>

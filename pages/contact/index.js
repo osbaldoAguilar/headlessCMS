@@ -1,4 +1,4 @@
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 import { useRef, useEffect } from "react";
 import PageLayout from '../../components/PageLayout'
 import styles from '../../styles/Form.module.css'
@@ -9,65 +9,6 @@ const initialState = {
     isSuccess: false,
     message: "",
     validationError: {}
-};
-
-const normalizeResponse = (url, response) => {
-    if (
-        url.match(/wp-json\/contact-form-7\/v1\/contact-forms\/\d+\/feedback/)
-    ) {
-        return normalizeContactForm7Response(response);
-    }
-
-    if (url.match(/wp-json\/gf\/v2\/forms\/\d+\/submissions/)) {
-        return normalizeGravityFormsResponse(response);
-    }
-
-    return {
-        ...initialState,
-        ...{
-            message: "Are you submitting to the right URL?"
-        }
-    };
-};
-
-// const normalizeGravityFormsResponse = (response) => {
-//     const isSuccess = response.is_valid;
-//     const message = isSuccess
-//         ? stripHtml(response.confirmation_message)
-//         : "There was a problem with your submission.";
-//     const validationError = isSuccess
-//         ? {}
-//         : Object.fromEntries(
-//               Object.entries(
-//                   response.validation_messages
-//               ).map(([key, value]) => [`input_${key}`, value])
-//           );
-
-//     return {
-//         isSuccess,
-//         message,
-//         validationError
-//     };
-// };
-
-const normalizeContactForm7Response = (response) => {
-    const isSuccess = response.status === "mail_sent";
-    const message = response.message;
-    const validationError = isSuccess
-        ? {}
-        : Object.fromEntries(
-              response.invalid_fields.map((error) => {
-                  const key = /cf7[-a-z]*.(.*)/.exec(error.into)[1];
-
-                  return [key, error.message];
-              })
-          );
-
-    return {
-        isSuccess,
-        message,
-        validationError
-    };
 };
 
 const wpForm = () => {
@@ -83,7 +24,7 @@ const wpForm = () => {
               body
           })
               .then((response) => response.json())
-              .then((response) => normalizeResponse(action, response))
+              .then((response) => ContactForm7Response(action, response))
               .then((response) => {
                   this.updateState(response);
 
@@ -107,7 +48,7 @@ const wpForm = () => {
   };
 };
 
-function contact() {
+export default function Contact() {
   const formElement = useRef()
    
   const normalizeContactForm7Response = (response) => {
@@ -149,6 +90,9 @@ function contact() {
         // Determine if the submission is not valid
         console.log('Happy path: ', normalizeContactForm7Response(response));
         // Handle the happy path
+        Router.push({
+            pathname: '/thanks'
+        })
       })
       .catch((error) => {
         // Handle the case when there's a problem with the request
@@ -211,88 +155,3 @@ function contact() {
       </PageLayout>
   )
 }
-
-export default contact
-
-
-
-// import Head from 'next/head';
-// import { useState } from 'react';
-// import { useRouter } from 'next/router';
-// import { sendMail } from '../../lib/api';
-// import styles from '../../styles/Home.module.css';
-
-// const Contact = ({ menuItems }) => {
-//   const [name, setName] = useState('');
-//   const [email, setEmail] = useState('');
-//   const [message, setMessage] = useState('');
-//   const router = useRouter();
-
-//   const handleSubmit = async evt => {
-//     // we'll fill this in in a moment
-//     evt.preventDefault();
-//     const emailContent = `
-//       Message received from <strong>${name}</strong>. 
-//       Their email address is <strong>${email}</strong>. <br />
-//       They'd like to know about...
-//       ${message}
-//     `;
-//     const data = await sendMail(
-//       'New message from website contact form',
-//       emailContent
-//     );
-
-//     if (data?.sent) {
-//       // email was sent successfully!
-//       console.log('data sent: ', data);
-//       router.push('/contact/thanks');
-//     }
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       <Head>
-//         <title>Contact us page</title>
-//       </Head>
-//       <main className={styles.main}>
-//         <h1 className={styles.title}>Contact us</h1>
-//         <hr />
-                
-//         <form onSubmit={handleSubmit}>
-//           <div>
-//             <label className='label'>Your name</label>
-//             <input
-//               className='input'
-//               type='text'
-//               value={name}
-//               onChange={e => setName(e.target.value)}
-//               required
-//             />
-//           </div>
-//           <div>
-//             <label className='label'>Your email</label>
-//             <input
-//               className='input'
-//               type='email'
-//               value={email}
-//               onChange={e => setEmail(e.target.value)}
-//               required
-//             />
-//           </div>
-//           <div>
-//             <label className='label'>Your message</label>
-//             <textarea
-//               className='textarea'                  
-//               value={message}
-//               onChange={e => setMessage(e.target.value)}
-//               ></textarea>
-//           </div>
-
-//           <button>Send</button>
-//         </form>
-// 		  </main>
-// 	  </div>              
-//   );
-// };
-
-// export default Contact;
