@@ -118,7 +118,7 @@ export default function Contact() {
         <BlockCentered>
             
             <div className={styles.form} x-data="wpForm()">
-        <form action={`${process.env.NEXT_PUBLIC_WORDPRESS_URL}/wp-json/contact-form-7/v1/contact-forms/208/feedback`} method="post" autoComplete="off" x-ref="form" submit="submit">
+        <form action='https://arautorepair1.wpengine.com/wp-json/contact-form-7/v1/contact-forms/208/feedback' method="post" autoComplete="off" x-ref="form" submit="submit">
         <p className="flex justify-center">
                 Have a Question, need a answer... Fill out the form below
             </p>
