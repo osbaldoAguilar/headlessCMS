@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import HeadingLink, { HeadingLinkAnchor } from "./HeadingLink";
 const Block = styled.div`
   p {
     display: block;
@@ -7,8 +8,75 @@ const Block = styled.div`
 `
 const BlockCentered = styled.div`
   display: flex;
-  place-content: center
+  place-content: center;
+  h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 50px;
+  }
+  div h4{
+    margin: 0
+  }
 `
+
+const HomeWPBK = styled.div`
+  ${HeadingLinkAnchor} {
+    background-color:pink;
+  }
+  a {
+    all: initial
+  }
+  a,
+  h4{
+    /* position: fixed; */
+    margin: auto;
+    /* width: 65%; */
+    height: 150px;
+    /* top: 141vh; */
+    /* left: 30%; */
+    text-align: center;
+    padding: 25px 0 10px 0;
+    background: royalblue;
+    color: whitesmoke;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase
+  }
+  #mapP{
+    padding: 20px;
+    font-size: 2.5rem;
+    cursor: help;
+    transition: all .2s ease-in-out;
+  }
+  #mapP:hover {
+    transform: scale(1.1); 
+    padding: 22px
+  }
+  .mapDIv{
+      position: relative;
+
+  }
+`
+
+    /* color: whitesmoke;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 20px 0;
+    text-align: center; */
+    /* text-shadow: 0px 3px 3px rgb(255 255 255 / 50%); */
+    /* position: absolute;
+    margin: auto;
+    background: white;
+    width: 100%;
+    height: 100px; */
+    /* margin-left: 35%;*/
+
+
 const RoundedCard = styled.div`
   display: flex;
   place-items: center;
@@ -261,4 +329,4 @@ const ButtonWrapper = styled.button`
   }
 `;
 
-export { AboutCard, Block, BlockCentered, RoundedCard, ExtendedCard, ServicesCard, ButtonWrapper}
+export { AboutCard, Block, HomeWPBK, BlockCentered, RoundedCard, ExtendedCard, ServicesCard, ButtonWrapper}

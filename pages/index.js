@@ -1,14 +1,36 @@
+import {useRef, useEffect} from 'react'
 import Router from 'next/router';
 import PageLayout from '../components/PageLayout'
-import { Block, BlockCentered } from "../components/StyledComponents/WrappingComponents";
+import { Block, BlockCentered, HomeWPBK } from "../components/StyledComponents/WrappingComponents";
+import {HeadingLink} from "../components/StyledComponents/HeadingLink";
 import styles from '../styles/Home.module.css'
 export default function Home({data}) {
   const {content} = data.nodeByUri
   const {posts} = data
+  let MapLinkRef = useRef()
+  let firstH4 = useRef()
+  useEffect(() => {
+
+    MapLinkRef = document.getElementById('mapLink')
+    console.log('MapLink: ', MapLinkRef)
+    firstH4 = document.getElementsByTagName('h4')[0]
+    console.log('firstH4: ', firstH4);
+  
+    return () => {
+
+    }
+  }, [])
+  const appendElement = () => {
+
+  }
   return (
     <PageLayout>
       <Block>
-        <article dangerouslySetInnerHTML={{__html: content}}></article>
+        <HomeWPBK>
+          
+            <article dangerouslySetInnerHTML={{__html: content}}></article>
+          
+        </HomeWPBK>
         <BlockCentered>
         <h4 className='flex items-center text-white text-2xl '>What people are saying about us</h4>
         <div className='grid grid-cols-2 text-white p-10 gap-2'>
@@ -19,7 +41,9 @@ export default function Home({data}) {
                 pathname:`/posts/${post.node.slug}`
               })
             }} key={post.node.id}>
-              <h4>{post.node.title}</h4>
+              <h4 className="posts">
+                {post.node.title}
+              </h4>
             </div> 
           })}
         </div>
