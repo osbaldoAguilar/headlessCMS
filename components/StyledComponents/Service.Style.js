@@ -109,7 +109,35 @@ const StyledServiceContainer = styled.div`
     'text text img'
     'img text text'
     'text video video' */
-    
+    @media (max-width: 768px) {
+        width: 90%;
+        a {
+            text-align: centerl
+        }
+        a,
+        p{
+            width: 90%
+        }
+        .mediaText {
+            /* background-color: green; */
+            display: flex;
+            flex-direction: column;
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .mediaText,
+        .mediaText:nth-child(even) {
+            /* background-color: green; */
+            display: flex;
+            flex-direction: column;
+            div {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
 
 
 
