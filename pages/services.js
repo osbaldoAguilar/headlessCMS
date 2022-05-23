@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageLayout from '../components/PageLayout'
+import StyledServiceContainer from "../components/StyledComponents/Service.Style";
 import { BlockCentered, ServicesCard } from "../components/StyledComponents/WrappingComponents";
 export default function Services({data}) {
   // console.log(data);
@@ -7,14 +8,17 @@ export default function Services({data}) {
   // console.log('content: ', content);
   return (
     <PageLayout>
-    <BlockCentered>
+    {/* <BlockCentered> */}
     
-    <ServicesCard>
+    {/* <ServicesCard> */}
+    <StyledServiceContainer>
       <article dangerouslySetInnerHTML={{__html: content}}></article>
 
-    </ServicesCard>
+    </StyledServiceContainer>
 
-    </BlockCentered>
+    {/* </ServicesCard> */}
+{/* 
+    </BlockCentered> */}
 
     </PageLayout>
   )

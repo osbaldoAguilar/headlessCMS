@@ -3,7 +3,8 @@ import '../styles/globals.css'
 
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import Head from 'next/head';
-import { Container } from '../components/StyledComponents/WrappingComponents';
+import { Container, StyledContainer } from '../components/StyledComponents/WrappingComponents';
+import StyledPage from '../components/StyledComponents/Page.Style';
 
 const fonts = [
   // "'Bebas Neue', cursive",
@@ -89,6 +90,7 @@ ${'' /* div {
 const theme = {
   colors: {
     primary: "#fafafa",
+    bg: 'linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d,    )'
   },
 };
 

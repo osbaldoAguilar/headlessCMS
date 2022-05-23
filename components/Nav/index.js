@@ -1,9 +1,12 @@
 import Link from "next/link"
 import Logo from "../StyledComponents/Logo"
 import NavLink from "../StyledComponents/NavLink"
+import { StyledContainer } from "../StyledComponents/WrappingComponents"
 import LinkStyle from "./Link"
 function index() {
   return (
+      <StyledContainer id='nav'>
+
         <LinkStyle>
           <header>
             <div className='flex flex-row justify-around items-center'>
@@ -21,6 +24,7 @@ function index() {
             </div>
           </header>
         </LinkStyle>
+      </StyledContainer>
   )
 }
 

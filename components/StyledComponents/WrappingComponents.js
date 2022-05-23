@@ -1,5 +1,16 @@
 import styled from "styled-components";
-import HeadingLink, { HeadingLinkAnchor } from "./HeadingLink";
+
+
+export const StyledContainer = styled.div`
+  max-width: 1440px;
+  margin: 0px auto;
+  padding: 0 20px;
+  /* width: 1400px; */
+  max-width: 100%;
+  /* padding: 0 20px; */
+  /* margin: 0 auto; */
+`
+
 const Block = styled.div`
   p {
     display: block;
@@ -20,12 +31,10 @@ const BlockCentered = styled.div`
 `
 
 const HomeWPBK = styled.div`
-  ${HeadingLinkAnchor} {
-    background-color:pink;
-  }
   a {
     all: initial
-  }
+  };
+  /* background-color: ${(props) => props.bg}; */
   a,
   h4{
     /* position: fixed; */
@@ -47,36 +56,57 @@ const HomeWPBK = styled.div`
     text-transform: uppercase
   }
   #mapP{
+    background-color: inherit;
     padding: 20px;
     font-size: 2.5rem;
+    height: 110px;
+    width: 100%;
     cursor: help;
-    transition: all .2s ease-in-out;
+    transition: all .25s ease-in;
+    position: absolute;
   }
   #mapP:hover {
-    transform: scale(1.1); 
-    padding: 22px
+    text-decoration: underline;
+    /* transform: scale(0.8);
+    transition: transform 0.25s ease-out; */
   }
   .mapDIv{
       position: relative;
 
   }
 `
+export const StyledBtnContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    .btnsWrapper {
+      display: inline-block;
+      position: relative;
+      background: transparent;
+      border: none;
+      color: inherit;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--orange);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      &:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+    .btns-container-top {
+      display: flex;
+      justify-content: flex-end;
+    }
 
-    /* color: whitesmoke;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 2rem;
-    padding: 20px 0;
-    text-align: center; */
-    /* text-shadow: 0px 3px 3px rgb(255 255 255 / 50%); */
-    /* position: absolute;
-    margin: auto;
-    background: white;
-    width: 100%;
-    height: 100px; */
-    /* margin-left: 35%;*/
-
-
+`
 const RoundedCard = styled.div`
   display: flex;
   place-items: center;
@@ -195,7 +225,7 @@ const ExtendedCard = styled.div`
   }
   
 `;
- 
+
 const AboutCard = styled.div`
   display: flex;
   justify-content: center;
@@ -255,7 +285,7 @@ const AboutCard = styled.div`
   }
 `;
 const ServicesCard = styled.div`
-  background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d);
+  /* background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d);
   .wp-block-cover {
     display: flex;
     flex-direction: row-reverse;
@@ -310,7 +340,7 @@ const ServicesCard = styled.div`
     line-height: 1.58;
     font-weight: 400;
     letter-spacing: -0.003em;
-  }
+  } */
 `;
 
 const ButtonWrapper = styled.button`
@@ -329,4 +359,4 @@ const ButtonWrapper = styled.button`
   }
 `;
 
-export { AboutCard, Block, HomeWPBK, BlockCentered, RoundedCard, ExtendedCard, ServicesCard, ButtonWrapper}
+export { AboutCard, Block, HomeWPBK, BlockCentered, RoundedCard, ExtendedCard, ServicesCard, ButtonWrapper }
