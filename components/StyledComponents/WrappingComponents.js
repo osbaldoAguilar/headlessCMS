@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const StyledContainer = styled.div`
   max-width: 1440px;
   margin: 0px auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   /* width: 1400px; */
   max-width: 100%;
   /* padding: 0 20px; */
@@ -60,10 +60,13 @@ const HomeWPBK = styled.div`
     padding: 20px;
     font-size: 2.5rem;
     height: 110px;
-    width: 100%;
+    /* width: 100%; */
     cursor: help;
     transition: all .25s ease-in;
     position: absolute;
+    p {
+      width: 80%
+    }
   }
   #mapP:hover {
     text-decoration: underline;
