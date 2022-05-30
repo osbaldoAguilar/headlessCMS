@@ -25,23 +25,28 @@ const changeFont = () => {
 //  "'Titillium Web', sans-serif" 
 
 const GlobalStyle = createGlobalStyle`
-html{
-  ${'' /* box-sizing: border-box;
+html,body,#__next{
+  height; 100
+  box-sizing: border-box;
   background: #F5F4F0;
   display:block;
   height: 100%;
-  max-width: 640px;
+  // max-width: 640px;
   margin:0 auto;
-  padding: 0; */}
+  padding: 0; 
 }
 
-body{
-  height: 100%
-}
+// body{
+//   height: 100%
+// }
 
 a,p,h1,h2,h3,h4,h5,h6 {
   font-family: ${changeFont()};
 }
+a,p {
+  font-size: 16px;
+}
+
 article {
   ${'' /* display: block;
   max-width: 900px;

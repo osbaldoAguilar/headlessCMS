@@ -9,21 +9,23 @@ import { StyledContainer } from "../StyledComponents/WrappingComponents"
 
 function index({children}) {
   return (
-    <>
+    <div>
 
         <Navbar/>
       <StyleGridContainer>
-        <StyledPage >
-          <StyledContainer>
+        <div>
+          <StyledPage >
+            <StyledContainer>
 
-        <div id="wpcontent" className={styles.wpChildren}>
-          {children}
+          <div id="wpcontent" className={styles.wpChildren}>
+            {children}
+          </div>
+            </StyledContainer>
+          </StyledPage>
+        <Footer/>
         </div>
-          </StyledContainer>
-        </StyledPage>
-      <Footer/>
       </StyleGridContainer>
-    </>
+    </div>
   )
 }
 

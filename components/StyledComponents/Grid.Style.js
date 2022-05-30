@@ -11,7 +11,10 @@ const StyleGridContainer = styled.div`
         /* display: none */
     }
     #footer {
-        grid-area: footer
+      grid-area:'footer';
+      height: 20px;
+
+        // display: nones
     }
     #wpcontent {
         grid-area: wpcontent

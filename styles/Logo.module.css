@@ -1,6 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); */
 .Logo {
     transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 .Logo:hover {

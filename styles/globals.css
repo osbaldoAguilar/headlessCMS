@@ -106,13 +106,6 @@ article h2 {
   max-width: 300px;
 
 }
-
-.paragraph {
-  overflow-wrap: break-word;
-  padding: 0 20px;
-  border-top: 2px solid whitesmoke;
-}
-
 table {
   /* border-collapse: collapse;
   width: 100%;

@@ -61,7 +61,7 @@ const HomeWPBK = styled.div`
     font-size: 2.5rem;
     height: 110px;
     /* width: 100%; */
-    cursor: help;
+    cursor: pointer;
     transition: all .25s ease-in;
     position: absolute;
     p {
@@ -76,6 +76,10 @@ const HomeWPBK = styled.div`
   .mapDIv{
       position: relative;
 
+  }
+  .paragraph {
+    max-width: 1440px;
+    padding: 20px;
   }
 `
 export const StyledBtnContainer = styled.div`
@@ -228,65 +232,92 @@ const ExtendedCard = styled.div`
   }
   
 `;
-
+const borderWidth = '3px';
 const AboutCard = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-direction: column;
-  text-align: center;
-  background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d);
-  color: black;
-  padding: 1rem;
-  div> div, div>div>div {
-    border: 5px solid whitesmoke;
-  }
+    margin: 0 auto;
+    max-width: 1440px;
+    p{
+      max-width: 1440px;
+    }
+    // .hours {
+    //   text-align: center;
+    //   img{
+    //     text-align: center;
+    //     display: block;
+    //     max-width: 1440px;
 
-  img {
-    max-width: 300px;
-  }
-  span {
-    font-weight: 100;
-    color: #606060;
-    margin-top: -1.5rem;
-    font-family: monospace;
-  }
-  p {
-    font-size: 1.15em;
-    line-height: 1.58;
-    font-weight: 400;
-    letter-spacing: -0.003em;
-  }
-  table {
-      display: flex;
-      place-items: center;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #f5f4f0;
-    thead {
-        font-size: 10px;
+    //   }
+    // }
+    .block {
+      text-align: center;
     }
-    td,
-    th {
-        border-bottom: 1px solid #f5f4f0;
-        border-right: 1px solid #f5f4f0;
-        padding: 10px 5px;
-        position: relative;
-        &:last-child {
-        border-right: none;
-        width: 150px;
-        button {
-            width: 100%;
-        }
-        }
+    .inline {
+      text-align: center;
+      display: block;
+      max-width: 1440px;
+      width: 100%
     }
-    tr {
-        &:hover {
-        background: var(--offWhite);
-        }
-    }
-  }
+   
 `;
+
+
+
+// display: flex;
+//   justify-content: center;
+//   width: 100%;
+//   flex-direction: column;
+//   text-align: center;
+//   background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d);
+//   color: black;
+//   padding: 1rem;
+//   div> div, div>div>div {
+//     border: 5px solid whitesmoke;
+//   }
+
+//   img {
+//     max-width: 300px;
+//   }
+//   span {
+//     font-weight: 100;
+//     color: #606060;
+//     margin-top: -1.5rem;
+//     font-family: monospace;
+//   }
+//   p {
+//     font-size: 1.15em;
+//     line-height: 1.58;
+//     font-weight: 400;
+//     letter-spacing: -0.003em;
+//   }
+//   table {
+//       display: flex;
+//       place-items: center;
+//     border-spacing: 0;
+//     width: 100%;
+//     border: 1px solid #f5f4f0;
+//     thead {
+//         font-size: 10px;
+//     }
+//     td,
+//     th {
+//         border-bottom: 1px solid #f5f4f0;
+//         border-right: 1px solid #f5f4f0;
+//         padding: 10px 5px;
+//         position: relative;
+//         &:last-child {
+//         border-right: none;
+//         width: 150px;
+//         button {
+//             width: 100%;
+//         }
+//         }
+//     }
+//     tr {
+//         &:hover {
+//         background: var(--offWhite);
+//         }
+//     }
+//   }
 const ServicesCard = styled.div`
   /* background-color:linear-gradient(to bottom right,  #02386e, #00498d, #0052a2, #000b18, #00172d);
   .wp-block-cover {

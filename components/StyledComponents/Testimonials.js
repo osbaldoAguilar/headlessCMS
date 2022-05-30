@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyleTestimonalContainer = styled.div`
     max-width: 1440px;
-    margin: 100px minmax(auto);
+    margin: 0 auto;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -18,9 +18,10 @@ const StyleTestimonalContainer = styled.div`
         display: flex;
         align-items: center;
         margin-bottom: 10px;
-        h4 {
-            font-size: 1.5rem
-        }
+
+            font-size: 1.5rem;
+            font-weight: 700
+
     }
     #testCard:nth-of-type(1){
         grid-column: 1/3;

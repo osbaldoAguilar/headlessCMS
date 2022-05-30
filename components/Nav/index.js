@@ -11,16 +11,9 @@ function index() {
           <header>
             <div className='flex flex-row justify-around items-center'>
                 <Link href='/' passHref><Logo/></Link>  
-                  
-                {/* <NavLink href='/'>
-                  <div className="flex flex-row justify-around items-center">
-                  {/* <p>Repair</p> */}
-                  {/* </div>
-                  </NavLink> */} 
                 <NavLink href='/about'>About</NavLink>
                 <NavLink href='/services'>Services</NavLink>
                 <NavLink href='/contact'>Contact</NavLink>
-                <NavLink href='/privacypolicy'>Privacy Policy</NavLink>
             </div>
           </header>
         </LinkStyle>
