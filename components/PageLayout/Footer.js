@@ -10,8 +10,9 @@ const StyledFooter = styled.div`
     flex-direction: row;
     padding 20px 0;
     a,p {
-      color: #000;
+      color: #3B3B3B;
       font-size: inherit;
+      font-weight: 700;
       padding: 0 2.5px;
     }
   }

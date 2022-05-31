@@ -1,11 +1,8 @@
 import {useRef, useEffect} from 'react'
-import Router from 'next/router';
 import PageLayout from '../components/PageLayout'
-import { Block, BlockCentered, HomeWPBK } from "../components/StyledComponents/WrappingComponents";
+import { Block, HomeWPBK } from "../components/StyledComponents/WrappingComponents";
 import StyleTestimonalContainer from '../components/StyledComponents/Testimonials';
-import {HeadingLink} from "../components/StyledComponents/HeadingLink";
-import styles from '../styles/Home.module.css'
-import Image from 'next/image';
+
 export default function Home({data}) {
   const {content} = data.nodeByUri
   const {posts} = data
@@ -23,9 +20,7 @@ export default function Home({data}) {
 
     }
   }, [])
-  const appendElement = () => {
 
-  }
   function removeTags(str) {
     if ((str===null) || (str===''))
         return false;

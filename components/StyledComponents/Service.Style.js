@@ -1,12 +1,19 @@
 import styled from "styled-components";
 
+// hsl(210, 100%, 31%); mainblue
+
 const StyledServiceContainer = styled.div`
-    width: 1366px;
-    max-width: 100%;
+    margin: 0 auto;
+    // max-width: 1440px;
     .mediaText {
+            // background: royalblue;
             display: flex;
+            margin: 50px 0;
+            // border-radius: 5px;
+            flex-wrap: wrap;
             justify-content: space-evenly;
-            padding: 30px 0
+            // border: 5px solid royalblue;
+            padding: 10px 5px
             /* flex-direction: row-reverse */
     }
     .mediaText:nth-child(even) {
@@ -23,6 +30,7 @@ const StyledServiceContainer = styled.div`
     }
     .divider:before{
         content: 'Professional Service';
+        margin: 20px, 
     }
     
     .videoCover {
@@ -54,25 +62,32 @@ const StyledServiceContainer = styled.div`
             }
         }
     div> div {
-        
+        margin: 20px 0;
         display: grid;
         grid-template-columns: repeat(2,auto);
         align-items: center;
         justify-items: flex-start;
+        background: linear-gradient(to top left,    #000b18, #00172d,  #02386e,#00498d, #0052a2,   );
+        max-width: 100%;
         img{
-            border: 10px solid royalblue;
+            border: 5px solid bluesteel;
+            // -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+            // box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
             border-radius: 10px;
             width: 450px;
             height: auto;
         }
         div {
-            /* background-color: wheat; */
+            
+            border-radius: 5px;
             padding: 10px;
             margin: 10px;
             display: flex;
             width: 700px;
             font-size: 2.5rem;
             flex-direction: column;
+            // -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+            // box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
             p:nth-of-type(1){
                 white-space: nowrap;
                 padding: 10px;
@@ -83,7 +98,6 @@ const StyledServiceContainer = styled.div`
             
             }
         }
-        
         .contactDiv {
             width: 80%
         }
